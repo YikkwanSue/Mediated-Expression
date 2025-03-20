@@ -6,11 +6,11 @@ body {
     font-size: 22px;
 }
 
-header {
-    background-color: #b4b4b4;
-    color: white;
-    padding: 10px;
-    font-family: "Times New Roman", Times, serif;}
+h1 {
+    color: rgb(102, 101, 101);
+    font-family: "Helvetica";
+    font-size: 30px;
+}
 
 section {
     padding: 20px;
@@ -34,7 +34,16 @@ table {
 }
 
 td {
-    border: 1px solid #ddd;
+    border: 3px solid #ddd;
     padding: 30px;
     text-align: center;
 }
+
+img {
+    width: 600px;
+    height: auto; 
+  }
+
+  h3 {
+    color: #aaaaaa; 
+  }
