@@ -21,9 +21,9 @@ section {
     padding: 0.2em;   
 }
 
-video {
-    width: 50%;   
-    height: auto;   
+iframe {
+    width: 80%;  
+    max-width: 800px; 
 }
 
 table {
