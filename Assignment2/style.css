@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #cdbbff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .background {
+    width: 100%;
+    max-width: 1500px; 
+    display: block;
+  }
+  
+  #startBtn {
+    position: absolute;
+    bottom: -100px; 
+    right: -50px; 
+    width: 300px;
+    cursor: pointer;
+    transition: filter 0.3s;
+  }
+  
+  #startBtn:hover {
+    filter: brightness(1.5) sepia(1) hue-rotate(10deg) saturate(5) contrast(1.2);
+  }
+  

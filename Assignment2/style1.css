@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d1bfff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .top-bar {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+  }
+  
+  .circle.active {
+    background-color: black;
+  }
+  
+  .next-step {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    cursor: pointer;
+  }
+  
+  .container {
+    margin-top: 100px;
+    background: #f2f2f2;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  
+  canvas {
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  .buttons {
+    margin-top: 30px;
+    display: flex;
+    gap:
+}
