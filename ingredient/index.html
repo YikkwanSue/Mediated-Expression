@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shape Drop Mug</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Dots -->
+  <div class="nav-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <!-- Next Step Image Link -->
+  <a href="drawing/index.html" class="next-step">
+    <img src="nextstep.png" alt="Next Step" />
+  </a>
+
+  <canvas id="canvas"></canvas>
+
+  <!-- Buttons -->
+  <div id="controls">
+    <button data-type="water">WATER</button>
+    <button data-type="flour">FLOUR</button>
+    <button data-type="salt">SALT</button>
+    <button data-type="butter">BUTTER</button>
+    <button data-type="yeast">YEAST</button>
+    <button data-type="sugar">SUGAR</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #cdbbff;
+  font-family: sans-serif;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#controls {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 60px;
+  z-index: 10;
+}
+
+#controls button {
+  padding: 22px 20px;
+  font-size: 20px;
+  font-weight: regular;
+  border: 2px solid black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+#controls button:hover {
+  background-color: #eee;
+}
+
+  /* Dots in top-left */ 
+  .nav-dots {
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+  }
+  
+  .dot {
+    width: 36px;
+    height: 36px;
+    border: 2.5px solid black;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+  
+  .dot.active {
+    background-color: black;
+  }
+  
+  /* Next Step image link */
+  .next-step {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 10;
+  }
+  
+  .next-step img {
+    height: 150px;
+    cursor: pointer;
+  }
+  
+  /* Bowl at bottom center */
+  .bowl {
+    position: absolute;
+    bottom: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(248, 243, 238);
+    width: 500px;
+    height: 240px;
+    border: 4px solid black;
+    border-top: none;
+    border-radius: 0 0 80% 80%;
+    z-index: 2;
+  }
+  
+  /* Controls below the bowl */
+  #controls {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 60px;
+    z-index: 10;
+  }
+  
+  #controls button {
+    padding: 17px 25px;
+    font-size: 25px;
+    font-weight: regular;
+    border: 3px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s;
+  }
+  
+  #controls button:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
