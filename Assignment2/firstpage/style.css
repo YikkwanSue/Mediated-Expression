@@ -16,11 +16,13 @@ body {
     width: 100%;
     max-width: 1500px; 
     display: block;
+    position: relative;
+    top: -50px; 
   }
-  
+
   #startBtn {
     position: absolute;
-    bottom: -100px; 
+    bottom: -60px; 
     right: -50px; 
     width: 300px;
     cursor: pointer;
@@ -28,6 +30,16 @@ body {
   }
   
   #startBtn:hover {
-    filter: brightness(1.5) sepia(1) hue-rotate(10deg) saturate(5) contrast(1.2);
+    filter: brightness(1.9) sepia(4) hue-rotate(19deg) saturate(7) contrast(1.2);
+  }
+  
+  #volumeIcon {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    z-index: 100;
   }
   
