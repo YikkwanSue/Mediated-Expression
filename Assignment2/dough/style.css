@@ -8,7 +8,7 @@
     margin: 0;
   }
 
-  /* Dots in top-left */ 
+  /* navigation dot */
   .nav-dots {
     position: absolute;
     top: 35px;
@@ -30,45 +30,28 @@
     background-color: black;
   }
 
+  /* dough */
   .dough {
     width: 800px;
     height: 500px;
-    background: #fffcef;
-    animation: morph 12s ease-in-out infinite;
-    background: linear-gradient(135deg, #fffdf5 0%, #fffae7 50%);
+    background: linear-gradient(135deg, #fffdf5 0%, #fff8da 50%);
     filter: drop-shadow(0 1px 3px rgba(0,0,0,0.15));
-    cursor: pointer;
-
+    transition: border-radius 0.2s ease;
+  
+    /* dough shape */
+    border-radius: 80% 45% 60% 40% / 60% 50% 50% 50%;
   }
   
-  
-  @keyframes morph {
-    0%, 100% {
-      border-radius: 50% 45% 60% 40% / 60% 40% 50% 50%;
-    }
-    25% {
-      border-radius: 55% 60% 40% 45% / 50% 55% 60% 40%;
-    }
-    50% {
-      border-radius: 40% 50% 55% 60% / 60% 50% 45% 55%;
-    }
-    75% {
-      border-radius: 60% 40% 50% 55% / 55% 60% 45% 50%;
-    }
-  }
-  
-  .tool-icon {
+ /* Next Step image link */
+ .next-step {
     position: absolute;
-    top: 100px;
-    left: 50px;
-    height: 64px;
-    cursor: pointer;
-    z-index: 20;
+    top: 40px;
+    right: 40px;
+    z-index: 10;
   }
   
-  /* When the tool is picked up, follow the mouse */
-  .tool-following {
-    position: fixed;
-    pointer-events: none;
-    z-index: 999;
+  .next-step img {
+    height: 150px;
+    cursor: pointer;
   }
+  

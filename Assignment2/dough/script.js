@@ -5,12 +5,12 @@ const audio = new Audio('dough.wav');
 let isPlaying = false;
 let toolActive = false;
 
-// Smooth morph speed
-let targetSpeed = 12;
-let currentSpeed = 12;
+// Smooth animation speed (for fallback if needed)
+let targetSpeed = 25;
+let currentSpeed = 25;
 
 function animate() {
-  currentSpeed += (targetSpeed - currentSpeed) * 0.05;
+  currentSpeed += (targetSpeed - currentSpeed) * 0.1;
   dough.style.animationDuration = `${currentSpeed}s`;
   requestAnimationFrame(animate);
 }
@@ -18,31 +18,17 @@ animate();
 
 window.addEventListener('mousemove', (e) => {
   const ratioX = e.clientX / window.innerWidth;
-  targetSpeed = 6 + ratioX * 6;
+  const ratioY = e.clientY / window.innerHeight;
 
-  // Move tool if picked up
-  if (toolActive) {
-    tool.style.left = `${e.clientX - 32}px`; // Centered
-    tool.style.top = `${e.clientY - 32}px`;
-  }
-});
+  // Adjust border-radius based on mouse
+  const topLeft = 40 + ratioX * 60;
+  const topRight = 60 - ratioX * 30;
+  const bottomRight = 50 + ratioY * 30;
+  const bottomLeft = 50 - ratioY * 30;
 
-// Click to pick up or drop the tool
-tool.addEventListener('click', () => {
-  toolActive = !toolActive;
-  if (toolActive) {
-    tool.classList.add('tool-following');
-  } else {
-    tool.classList.remove('tool-following');
-  }
-});
+  const radius = `${topLeft}% ${topRight}% ${bottomRight}% ${bottomLeft}% / ${bottomLeft}% ${topLeft}% ${topRight}% ${bottomRight}%`;
+  dough.style.borderRadius = radius;
 
-// Only play sound if tool is active and interacting with dough
-dough.addEventListener('mousemove', () => {
-  if (toolActive && !isPlaying) {
-    audio.currentTime = 0;
-    audio.play();
-    isPlaying = true;
-    setTimeout(() => isPlaying = false, 200);
-  }
+  // Animation speed 
+  targetSpeed = 7 + ratioX * 7;
 });
