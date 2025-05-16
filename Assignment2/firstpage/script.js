@@ -1,3 +1,4 @@
+// Navigation
 document.getElementById('startBtn').addEventListener('click', function () {
   window.location.href = '/Assignment2/guide/index.html';
 });
@@ -9,12 +10,29 @@ document.getElementById('startBtn').addEventListener('mouseenter', () => {
   hoverSound.play();
 });
 
-// Volume control
+// Volume to mute it
 const volumeIcon = document.getElementById('volumeIcon');
 const bgm = document.getElementById('bgm');
 let isMuted = false;
 
-volumeIcon.addEventListener('click', () => {
+// Set initial volume
+bgm.volume = 1.0;
+
+// !! check mdn web doc if not working
+const enableAudio = () => {
+  if (!bgm.paused) return;
+
+  bgm.play().catch((err) => console.warn("Autoplay blocked:", err));
+  document.removeEventListener('click', enableAudio);
+
+  const notice = document.getElementById('bgmNotice');
+  if (notice) notice.style.display = 'none';
+};
+document.addEventListener('click', enableAudio);
+
+// Volume toggle icon
+volumeIcon.addEventListener('click', (e) => {
+  e.stopPropagation(); 
   isMuted = !isMuted;
   bgm.muted = isMuted;
   volumeIcon.src = isMuted ? 'volumeoff.png' : 'volume.png';
