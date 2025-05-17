@@ -1,15 +1,8 @@
 const dough = document.querySelector('.dough');
 const tool = document.getElementById('tool');
-const audio = new Audio('dough.wav');
 
 let isPlaying = false;
 let toolHeld = false;
-
-const nextStepBtn = document.getElementById('nextStepBtn');
-nextStepBtn.addEventListener('click', () => {
-  nextPageAudio.currentTime = 0; // rewind sound
-  nextPageAudio.play();
-});
 
 // Dough morph animation
 let targetSpeed = 25;
@@ -22,7 +15,7 @@ function animate() {
 }
 animate();
 
-// Mousemove - shape and speed
+// Mousemove
 window.addEventListener('mousemove', (e) => {
   const ratioX = e.clientX / window.innerWidth;
   const ratioY = e.clientY / window.innerHeight;
@@ -48,15 +41,5 @@ tool.addEventListener('click', (e) => {
   e.stopPropagation();
   toolHeld = true;
   tool.style.cursor = 'grabbing';
-});
-
-// Optional: Sound when tool is over dough
-dough.addEventListener('mousemove', () => {
-  if (toolHeld && !isPlaying) {
-    audio.currentTime = 0;
-    audio.play();
-    isPlaying = true;
-    setTimeout(() => isPlaying = false, 200);
-  }
 });
 
