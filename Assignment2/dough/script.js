@@ -43,3 +43,25 @@ tool.addEventListener('click', (e) => {
   tool.style.cursor = 'grabbing';
 });
 
+// Click Sounds(next page)
+const nextSound = new Audio('next.wav');
+
+const nextStepBtn = document.getElementById('nextStepBtn');
+
+// Play sound on click
+nextStepBtn.addEventListener('click', (e) => {
+  e.preventDefault(); 
+
+  nextSound.currentTime = 0;
+  nextSound.play();
+
+  // Navigate to next page
+  setTimeout(() => {
+    window.location.href = '/Assignment2/guide1/index.html'; 
+  }, 300);
+});
+
+  // Chief talk
+  function playChiefTalk() {
+    document.getElementById('chiefAudio').play();
+  }

@@ -1,0 +1,70 @@
+/* Reset */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #cdbbff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#drawing-container {
+  position: relative;
+}
+
+#oven-img {
+  width: 500px;  
+  height: auto; 
+  display: block;
+}
+
+#drawing-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: crosshair;
+}
+
+#undo-btn {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  width: 200px;
+  cursor: pointer;
+}
+
+#export-btn {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  width: 250px;
+  cursor: pointer;
+}
+
+#color-picker {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+   /* Chief talking */
+   #talk-button {
+    position: fixed;
+    bottom: 0px;
+    right: 50px;  
+    width: 350px;
+    cursor: pointer;
+    z-index: 1000;
+  }

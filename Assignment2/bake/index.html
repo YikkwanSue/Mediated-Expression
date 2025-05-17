@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oven Drawing</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Controls -->
+  <div style="position: fixed; top: 10px; left: 10px; z-index: 10;">
+    <img src="undo.png" alt="Undo" id="undo-btn" />
+    <img src="export.png" alt="Export" id="export-btn" />
+    <input type="color" id="color-picker" value="#000000" />
+  </div>
+
+  
+  <!-- Drawing container -->
+  <div id="drawing-container">
+    <img src="oven.png" alt="Oven" id="oven-img" />
+    <canvas id="drawing-canvas"></canvas>
+  </div>
+
+  <!-- Chalk sound -->
+  <audio id="chalk-sound" src="chalk.wav" preload="auto"></audio>
+
+<!-- Chief talking -->
+<img src="drawtalk.png" alt="Talk" id="talk-button" onclick="playDrawTalk()" />
+<audio id="chiefAudio" src="drawtalk.wav"></audio>
+
+</body>
+</html>

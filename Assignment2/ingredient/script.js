@@ -95,13 +95,20 @@ window.addEventListener('mouseup', () => {
   stopSound(currentType);
 });
 
-// Button logic
+// Button 
 document.querySelectorAll('button[data-type]').forEach(button => {
   const type = button.getAttribute('data-type');
   button.addEventListener('click', () => {
     currentType = type;
+
+    // Play sound when click the button
+    nextSound.currentTime = 0;
+    nextSound.play().catch((err) => {
+      console.error('Failed to play next.wav:', err);
+    });
   });
 });
+
 
 function dropLiquid(type) {
   const x = mousePos.x;
@@ -152,3 +159,24 @@ const mugLeft = Bodies.rectangle(mugX - mugWidth / 2 + wallThickness / 2, mugY -
 const mugRight = Bodies.rectangle(mugX + mugWidth / 2 - wallThickness / 2, mugY - mugHeight / 2, wallThickness, mugHeight, { isStatic: true });
 
 World.add(world, [mugBottom, mugLeft, mugRight]);
+
+// Click Sounds(next page)
+const nextSound = new Audio('next.wav');
+
+// Get the image element
+const nextStepBtn = document.getElementById('nextStepBtn');
+
+// Play sound on click
+nextStepBtn.addEventListener('click', (e) => {
+  e.preventDefault(); // Prevent instant navigation
+
+  nextSound.currentTime = 0;
+  nextSound.play();
+
+  // Navigate after short delay (e.g. 300ms)
+  setTimeout(() => {
+    window.location.href = '/Assignment2/dough/index.html';
+  }, 300);
+});
+
+

@@ -29,7 +29,6 @@
     background-color: black;
   }
 
-  /* dough */
   .dough {
     width: 800px;
     height: 500px;
@@ -41,7 +40,6 @@
     border-radius: 80% 45% 60% 40% / 60% 50% 50% 50%;
   }
   
- /* Next Step image link */
  .next-step {
     position: absolute;
     top: 40px;
@@ -60,6 +58,17 @@
     left: 100px;
     width: 400px;
     cursor: grab;
-    pointer-events: auto; /* Allow dragging */
+    pointer-events: auto; 
   }
+
+   /* Chief talking */
+  #talk-button {
+    position: fixed;
+    bottom: 0px;
+    left: 50px;
+    width: 350px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
   
