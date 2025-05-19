@@ -25,7 +25,8 @@ window.addEventListener('mousemove', (e) => {
   const bottomRight = 50 + ratioY * 30;
   const bottomLeft = 50 - ratioY * 30;
 
-  const radius = `${topLeft}% ${topRight}% ${bottomRight}% ${bottomLeft}% / ${bottomLeft}% ${topLeft}% ${topRight}% ${bottomRight}%`;
+  const radius = `${topLeft}% ${topRight}% ${bottomRight}% ${bottomLeft}% / 
+  ${bottomLeft}% ${topLeft}% ${topRight}% ${bottomRight}%`;
   dough.style.borderRadius = radius;
 
   targetSpeed = 7 + ratioX * 7;
