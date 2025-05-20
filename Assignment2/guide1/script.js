@@ -5,7 +5,7 @@ function playAudio() {
   function goToIngredients() {
     window.location.href = '../bake/index.html';
 }
-document.getElementById('bake-button').addEventListener('click', function () {
+document.getElementById('bake-img').addEventListener('click', function () {
     window.location.href = '../bake/index.html';
   });
   
