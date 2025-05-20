@@ -1,6 +1,6 @@
 // Navigation
 document.getElementById('startBtn').addEventListener('click', function () {
-  window.location.href = '/Mediated-Expression/Assignment2/guide/index.html';
+  window.location.href = '../guide/index.html';
 });
 
 // Play hover sound on start button
