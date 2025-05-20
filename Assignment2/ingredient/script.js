@@ -84,6 +84,7 @@ canvas.addEventListener('mousemove', event => {
 canvas.addEventListener('mousedown', () => {
   isMouseDown = true;
   playSound(currentType);
+
   dropInterval = setInterval(() => {
     dropLiquid(currentType);
   }, 80);
@@ -173,7 +174,7 @@ nextStepBtn.addEventListener('click', (e) => {
   nextSound.currentTime = 0;
   nextSound.play();
 
-  // Navigate after short delay (e.g. 300ms)
+  // Navigate after short delay
   setTimeout(() => {
     window.location.href = '/Assignment2/dough/index.html';
   }, 300);
