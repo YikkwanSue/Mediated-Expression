@@ -3,6 +3,6 @@ function playAudio() {
   }
   
   function goToIngredients() {
-    window.location.href = '/Assignment2/dough/index.html';
+    window.location.href = '../dough/index.html';
   }
   

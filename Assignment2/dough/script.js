@@ -58,7 +58,7 @@ nextStepBtn.addEventListener('click', (e) => {
 
   // Navigate to next page
   setTimeout(() => {
-    window.location.href = '/Assignment2/guide1/index.html'; 
+    window.location.href = '../guide1/index.html'; 
   }, 300);
 });
 

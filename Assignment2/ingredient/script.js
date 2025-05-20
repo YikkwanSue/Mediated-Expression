@@ -176,7 +176,7 @@ nextStepBtn.addEventListener('click', (e) => {
 
   // Navigate after short delay
   setTimeout(() => {
-    window.location.href = '/Assignment2/dough/index.html';
+    window.location.href =  '../dough/index.html';
   }, 300);
 });
 
