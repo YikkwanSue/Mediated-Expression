@@ -1,12 +1,19 @@
 body {
   background-color: #c6b2f9;
   font-family: sans-serif;
+  margin: 0;
+  padding: 50px ;
   display: flex;
   justify-content: center;
-  padding: 40px; /* add some breathing room */
-  margin: 0;
-  min-height: 100vh;
-  box-sizing: border-box;
+
+}
+
+.corner-image {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  width: 250px;
+  cursor: pointer;
 }
 
 .table-container {
@@ -15,6 +22,7 @@ body {
   overflow: hidden;
   max-width: 1000px;
   width: 100%;
+  background-color: white;
 }
 
 table {
@@ -24,15 +32,45 @@ table {
 
 td {
   border: 2px solid black;
-  padding: 16px;
+  padding: 18px;
   vertical-align: top;
   background-color: white;
 }
 
 td:first-child {
-  width: 30%;
+  width: 20%;
 }
 
 td:last-child {
-  width: 70%;
+  width: 90%;
 }
+
+.table-image {
+  max-width: 90%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.bowl-image {
+  max-width: 70%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.chief-image {
+  max-width: 30%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.page-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.highlight {
+  background-color: rgb(255, 246, 185);   
+  color: black;              
+}
+
