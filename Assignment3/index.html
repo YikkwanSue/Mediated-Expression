@@ -110,20 +110,20 @@
           I chose to use <span class="highlight">lightweight, browser-friendly technologies</span> like HTML, CSS, JavaScript, and some Matter.js to keep the project accessible and manageable. Each page focused on a different type of interaction — from button clicks to drag-and-drop to soft-body physics — so I had to carefully plan which tools to use based on the complexity of the feature.
 
           <h4>1. Home Page</h4>
-          I focused on sound interaction using hover effects and background music triggered by clicks, setting a playful tone from the start.
+          I used HTML to structure basic elements,like a "Start" button. With CSS, I styled the layout and added playful visual elements like dog images to set the tone. JavaScript was used to control the background music—for example, playing or pausing the audio when click the button
           <img src="home.png" alt="Home preview" class="page-image" />
 
           <h4>2. Ingredients Page</h4>
-          I used Matter.js to simulate gravity and added sound effects to enhance interaction.
+          I created a canvas-based interface where users could drop ingredients (different shape) using external libraries to simulate physics and gravity. I also added sound effects during dragging to enhance feedback.Instead of simple buttons, the ingredients were draggable objects affected by real-time forces.
           <img src="ingredient.png" alt="Ingredients preview" class="page-image" />
 
           <h4>3. Dough Page</h4>
-          I combined CSS animations with JavaScript to create a soft, pokeable dough without overly complex code.
+          I implemented a shape that morphs in response to the mouse using CSS border-radius and JavaScript. This part was technically challenging because I had never made shape animations before. I used mousemove events to adjust the dough’s shape dynamically, simulating softness and interactivity. I also added a draggable tool icon that follows the mouse when clicked and held.
           <img src="dough.png" alt="Dough preview" class="page-image" />
 
           <h4>4. Drawing Page</h4>
-          Using the Canvas API, users can draw on the oven and export their final decoration.
-          <img src="drawing.png" alt="Drawing preview" class="page-image" />
+          I layered a canva element over an image of an oven using HTML and CSS. With JavaScript, I enabled freehand drawing on the canvas and allowed users to pick colors, undo, and export their artwork as an image. I also added sound effects (like chalk noise) to make the drawing experience more fun.
+         <img src="drawing.png" alt="Drawing preview" class="page-image" />
         </td>
       </tr>
 
